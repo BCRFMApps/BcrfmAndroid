@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">BCRFM</string>
+    <string name="drawer_open">Menu opened</string>
+    <string name="drawer_close">Menu closed</string>
+    <string name="action_settings">Settings</string>
+
+
+    <string name="home">Listen Live to BCRFM</string>
+    <string name="contact">Contact BCRFM</string>
+    <string name="about">About BCRFM</string>
+    <string name="fb">BCRFM on Facebook</string>
+    <string name="tweet">BCRFM on Twitter</string>
+    <string name="schedule">BCRFM Show Schedules</string>
+
+</resources>
