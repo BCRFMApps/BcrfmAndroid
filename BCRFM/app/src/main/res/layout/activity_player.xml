@@ -1,29 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent" android:id="@+id/activity_player">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView2"
+        android:src="@drawable/bcrfm" />
 
     <TextView
-        android:id="@+id/textView1"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:text="Playing Music from Resources"
-        android:textSize="20dp" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text=" "
+            android:id="@+id/txtVStatus"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:textColor="#ffff1914" />
 
-    <Button
-        android:id="@+id/play"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dip"
-        android:text="Play" />
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1.0">
 
-    <Button
-        android:id="@+id/stop"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dip"
-        android:text="Stop" />
+            <Button android:id="@+id/btnPlay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Play"
+                android:layout_weight=".2"
+                android:layout_alignParentLeft="true"/>
+
+            <Button android:id="@+id/btnPause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pause"
+                android:layout_weight=".2"
+                android:layout_centerHorizontal="true"/>
+
+            <Button
+                android:id="@+id/btnStop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".2"
+                android:text="Stop"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
 
 </LinearLayout>

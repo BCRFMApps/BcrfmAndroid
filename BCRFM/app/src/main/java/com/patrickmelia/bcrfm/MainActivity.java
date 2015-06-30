@@ -3,7 +3,7 @@ package com.patrickmelia.bcrfm;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.Intent;
-import android.graphics.BitmapFactory;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
@@ -11,23 +11,35 @@ import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
+import android.widget.Button;
+import android.widget.TextView;
+
 
 import com.patrickmelia.bcrfm.Fragments.AboutFragment;
 import com.patrickmelia.bcrfm.Fragments.ContactFragment;
 import com.patrickmelia.bcrfm.Fragments.FbookFragment;
+import com.patrickmelia.bcrfm.Fragments.MediaPlayerNew;
 import com.patrickmelia.bcrfm.Fragments.ScheduleFragment;
 import com.patrickmelia.bcrfm.Fragments.TweetFragment;
 
 
 
 public class MainActivity extends ActionBarActivity
-        implements NavigationDrawerCallbacks {
+        implements NavigationDrawerCallbacks{
 
 
     private NavigationDrawerFragment mNavigationDrawerFragment;
     private Toolbar mToolbar;
     private CharSequence mTitle;
+
+    private MediaPlayer mp = null;
+    private String TAG = getClass().getSimpleName();
+    private Button play;
+    private Button pause;
+    private Button stop;
+    private TextView txtVStatus;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +53,8 @@ public class MainActivity extends ActionBarActivity
 
         // Set up the drawer.
         mNavigationDrawerFragment.setup(R.id.fragment_drawer, (DrawerLayout) findViewById(R.id.drawer), mToolbar);
+
+
     }
 
     @Override
@@ -49,9 +63,7 @@ public class MainActivity extends ActionBarActivity
         FragmentManager fragmentManager = getFragmentManager();
         switch (position) {
             case 0:
-                /*Intent intent = new Intent(MainActivity.this, splash.class);
-                startActivity(intent);*/
-                newFragment = new AboutFragment();
+                newFragment = new MediaPlayerNew();
                 break;
             case 1: //schedule
                 newFragment = new ScheduleFragment();
@@ -84,6 +96,10 @@ public class MainActivity extends ActionBarActivity
         browserIntent.setDataAndType(uri, "text/html");
         browserIntent.addCategory(Intent.CATEGORY_BROWSABLE);
         this.startActivity(browserIntent);
+    }
+
+    public enum cAct{
+        Splash, Main, Facebook, Twitter, Sch, About, Contact
     }
 
 
