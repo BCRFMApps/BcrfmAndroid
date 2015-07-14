@@ -11,6 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.patrickmelia.bcrfm.MainActivity;
 import com.patrickmelia.bcrfm.R;
 
 /**
@@ -29,6 +31,8 @@ public class MediaPlayerNew extends Fragment implements android.media.MediaPlaye
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.activity_player, container, false);
+
+        ((MainActivity)getActivity()).setTitle(R.string.home);
 
         return view;
     }

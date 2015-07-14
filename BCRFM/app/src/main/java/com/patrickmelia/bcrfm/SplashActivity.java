@@ -5,6 +5,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
 /**
  * Created by Patrick on 25/06/2015.
  */
@@ -12,6 +18,12 @@ public class SplashActivity extends Activity {
 
     // Splash screen timer
     private static int SPLASH_TIME_OUT = 5000;
+
+    String url_recentshows = "http://54.77.165.215/phoneservice/service1.svc/json/Getmostrecentshows";
+
+    ArrayList<HashMap<String, String>> arraylist;
+    JSONObject jsonobject;
+    JSONArray jsonarray;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
