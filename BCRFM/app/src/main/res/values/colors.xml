@@ -11,7 +11,7 @@
     <color name="myPrimaryColor">#FFEB2A</color>
     <color name="myPrimaryColorDrawer">#F0FF00</color>
     <!--<color name="myPrimaryDarkColor">#FBC02D</color>-->
-    <color name="myPrimaryDarkColor">#FF5252</color>
+    <color name="myPrimaryDarkColor">#FBC02D</color>
     <color name="primary_light">#FFF9C4</color>
     <color name="myAccentColor">#FF5252</color>
     <color name="myDrawerBackground">#FFF</color>

@@ -23,6 +23,8 @@ public class AboutFragment extends Fragment {
 
         ((MainActivity)getActivity()).setTitle(R.string.about);
 
+        String string = getString(R.string.hello);
+
         return view;
     }
 }

@@ -69,7 +69,7 @@ public class BCRfmHelper extends SQLiteOpenHelper {
             "CREATE TABLE " + BCRfmDbContract.Presenter_Series.TABLE_NAME + " (" +
                     BCRfmDbContract.Presenter_Series.COLUMN_NAME_ID + " INTEGER PRIMARY KEY," +
                     BCRfmDbContract.Presenter_Series.COLUMN_NAME_Presenter_Id + "INTERGER ," +
-                    BCRfmDbContract.Presenter_Series.COLUMN_NAME_Seris_Id + "INTERGER ," +
+                    BCRfmDbContract.Presenter_Series.COLUMN_NAME_Series_Id + "INTERGER ," +
                     " )";
 
     //endregion
