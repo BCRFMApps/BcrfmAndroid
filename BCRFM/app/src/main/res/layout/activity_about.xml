@@ -8,11 +8,12 @@
         android:layout_width="match_parent"
         android:layout_height="260dp"
         android:layout_gravity="center_horizontal|top"
-        android:src="@drawable/bcr"
+        android:src="@drawable/bcrfm101white"
         android:layout_marginTop="20dp" />
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:scrollbars = "vertical"
         android:text="@string/hello" />
 
 </LinearLayout>

@@ -16,7 +16,7 @@
             android:layout_height="140dp"
             android:layout_marginBottom="16dp"
             android:layout_marginTop="24dp"
-            android:src="@drawable/bcrfm" />
+            android:src="@drawable/bcrfm101yellow" />
 
     </LinearLayout>
     <android.support.v7.widget.RecyclerView android:id="@+id/drawerList"

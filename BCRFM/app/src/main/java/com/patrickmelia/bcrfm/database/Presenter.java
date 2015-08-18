@@ -281,7 +281,7 @@ public class Presenter {
             if (getImageURL().isEmpty())
             {
                 Resources res = context.getResources();
-                theImage = BitmapFactory.decodeResource(res,R.drawable.bcrfm);
+                theImage = BitmapFactory.decodeResource(res,R.drawable.bcrfm101white);
             }
             else {
 
@@ -291,7 +291,7 @@ public class Presenter {
                 if(!file.exists())
                 {
                     Resources res = context.getResources();
-                    theImage = BitmapFactory.decodeResource(res, R.drawable.bcrfm);
+                    theImage = BitmapFactory.decodeResource(res, R.drawable.bcrfm101white);
                 }else
                 {
                     theImage = BitmapFactory.decodeFile(file.getAbsolutePath());

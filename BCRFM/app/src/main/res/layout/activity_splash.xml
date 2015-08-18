@@ -4,7 +4,7 @@
     xmlns:wheel="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/myPrimaryColorDrawer"
+    android:background="@color/myPrimaryColor"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -18,7 +18,7 @@
         android:layout_height="300dp"
         android:layout_gravity="center"
         android:layout_marginBottom="100dp"
-        android:src="@drawable/bcrfm"
+        android:src="@drawable/bcrfm101yellow"
         android:layout_alignParentRight="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />

@@ -5,10 +5,10 @@
 
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
         android:id="@+id/imageView2"
-        android:src="@drawable/bcrfm" />
+        android:src="@drawable/bcrfm101yellow" />
 
     <TextView
             android:layout_width="wrap_content"
