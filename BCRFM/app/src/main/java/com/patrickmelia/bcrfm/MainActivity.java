@@ -21,7 +21,7 @@ import com.patrickmelia.bcrfm.Fragments.FbookFragment;
 import com.patrickmelia.bcrfm.Fragments.MediaPlayerNew;
 import com.patrickmelia.bcrfm.Fragments.ScheduleFragment;
 import com.patrickmelia.bcrfm.Fragments.TweetFragment;
-
+import com.patrickmelia.bcrfm.Fragments.WebSiteFragment;
 
 
 public class MainActivity extends ActionBarActivity
@@ -68,18 +68,13 @@ public class MainActivity extends ActionBarActivity
             case 1: //schedule
                 newFragment = new ScheduleFragment();
                 break;
-            case 2://Fbook
-                newFragment = new FbookFragment();
-                //displayBrowser("https://www.facebook.com/pages/Ballina-Community-Radio/181482268700979");
+            case 2://Info
+                newFragment = new WebSiteFragment();
                 break;
-            case 3://Twitter
-                newFragment = new TweetFragment();
-                //displayBrowser("https://twitter.com/ballinacrfm");
-                break;
-            case 4://Info
+            case 3://Contact
                 newFragment = new AboutFragment();
                 break;
-            case 5://Contact
+            case 4://Contact
                 newFragment = new ContactFragment();
                 break;
         }

@@ -1,10 +1,12 @@
 package com.patrickmelia.bcrfm.Fragments;
 
 import android.app.Fragment;
+import android.app.FragmentManager;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,7 +20,7 @@ import com.patrickmelia.bcrfm.R;
  */
 public class ContactFragment extends Fragment {
 
-    Button btnCall;
+    Button btnCall, btnFacebook, btnTwitter, btnGoogle;
     //Button btnEmail;
     //Button btnText;
 
@@ -32,11 +34,11 @@ public class ContactFragment extends Fragment {
         btnCall = (Button) view.findViewById(R.id.btnCall);
         btnCall.setOnClickListener(myhandler1);
 
-        //btnEmail = (Button) view.findViewById(R.id.btnEmail);
-        //btnEmail.setOnClickListener(myhandler2);
+        btnFacebook = (Button) view.findViewById(R.id.btnFacebook);
+        btnFacebook.setOnClickListener(fbhandler);
 
-        //btnText = (Button) view.findViewById(R.id.btnText);
-        //btnText.setOnClickListener(myhandler3);
+        btnTwitter = (Button) view.findViewById(R.id.btnTwitter);
+        btnTwitter.setOnClickListener(tweethandler);
 
         return view;
     }
@@ -49,6 +51,33 @@ public class ContactFragment extends Fragment {
             Intent intent = new Intent(Intent.ACTION_CALL);
             intent.setData(Uri.parse("tel:" + number));
             startActivity(intent);
+        }
+    };
+
+
+    View.OnClickListener tweethandler = new View.OnClickListener() {
+        public void onClick(View v) {
+            TweetFragment newFragment = new TweetFragment();
+            FragmentManager fm = getFragmentManager();
+            FragmentTransaction transaction = fm.beginTransaction();
+            transaction.replace(R.id.container, newFragment);
+            transaction.addToBackStack(null);
+
+            // Commit the transaction
+            transaction.commit();
+        }
+    };
+
+    View.OnClickListener fbhandler = new View.OnClickListener() {
+        public void onClick(View v) {
+            FbookFragment newFragment = new FbookFragment();
+            FragmentManager fm = getFragmentManager();
+            FragmentTransaction transaction = fm.beginTransaction();
+            transaction.replace(R.id.container, newFragment);
+            transaction.addToBackStack(null);
+
+            // Commit the transaction
+            transaction.commit();
         }
     };
 
