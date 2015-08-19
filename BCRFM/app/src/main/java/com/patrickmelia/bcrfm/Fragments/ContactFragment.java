@@ -21,8 +21,8 @@ import com.patrickmelia.bcrfm.R;
 public class ContactFragment extends Fragment {
 
     Button btnCall, btnFacebook, btnTwitter, btnGoogle;
-    //Button btnEmail;
-    //Button btnText;
+    Button btnEmail;
+    Button btnText;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -34,11 +34,17 @@ public class ContactFragment extends Fragment {
         btnCall = (Button) view.findViewById(R.id.btnCall);
         btnCall.setOnClickListener(myhandler1);
 
+        btnEmail = (Button) view.findViewById(R.id.btnEmail);
+        btnEmail.setOnClickListener(emailhandler);
+
         btnFacebook = (Button) view.findViewById(R.id.btnFacebook);
         btnFacebook.setOnClickListener(fbhandler);
 
         btnTwitter = (Button) view.findViewById(R.id.btnTwitter);
         btnTwitter.setOnClickListener(tweethandler);
+
+        btnText = (Button) view.findViewById(R.id.btnText);
+        btnText.setOnClickListener(texthandler);
 
         return view;
     }
@@ -81,26 +87,25 @@ public class ContactFragment extends Fragment {
         }
     };
 
-    /*View.OnClickListener myhandler2 = new View.OnClickListener() {
+    View.OnClickListener emailhandler = new View.OnClickListener() {
         public void onClick(View v) {
-            // implements your things
-            //TODO: change number
-            String number = "0857892864";
-            Intent intent = new Intent(Intent.ACTION_CALL);
-            intent.setData(Uri.parse("tel:" + number));
+            String email = "studio.brcfm@gmail.com";
+            Intent intent = new Intent(Intent.ACTION_SENDTO);
+            intent.setData(Uri.parse("mailto:" + email));
             startActivity(intent);
         }
     };
 
-    View.OnClickListener myhandler3 = new View.OnClickListener() {
+    View.OnClickListener texthandler = new View.OnClickListener() {
         public void onClick(View v) {
             // implements your things
             //TODO: change number
-            String number = "0857892864";
-            Intent intent = new Intent(Intent.ACTION_CALL);
-            intent.setData(Uri.parse("tel:" + number));
-            startActivity(intent);
+            String textnum = "0877175175";
+            Intent smsIntent = new Intent(Intent.ACTION_SENDTO);
+            smsIntent.setType("vnd.android-dir/mms-sms");
+            smsIntent.setData(Uri.parse("sms:" + textnum));
+            startActivity(smsIntent);
         }
-    };*/
+    };
 }
 
