@@ -53,7 +53,7 @@ public class ContactFragment extends Fragment {
         public void onClick(View v) {
             // implements your things
             //TODO: change number
-            String number = "3539620050";
+            String number = "+3539620050";
             Intent intent = new Intent(Intent.ACTION_CALL);
             intent.setData(Uri.parse("tel:" + number));
             startActivity(intent);
