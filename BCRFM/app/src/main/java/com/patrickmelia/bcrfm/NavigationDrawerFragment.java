@@ -118,11 +118,11 @@ public class NavigationDrawerFragment extends Fragment implements NavigationDraw
 
     public List<NavigationItem> getMenu() {
         List<NavigationItem> items = new ArrayList<NavigationItem>();
-        items.add(new NavigationItem("Listen Live", getResources().getDrawable(R.mipmap.ic_launcher)));
+        items.add(new NavigationItem("Listen Live", getResources().getDrawable(R.drawable.ic_radio_black_48dp)));
         items.add(new NavigationItem("Show Schedule's", getResources().getDrawable(R.mipmap.ic_launcher)));
-        items.add(new NavigationItem("BCRFM Website", getResources().getDrawable(R.mipmap.ic_launcher)));
-        items.add(new NavigationItem("About Us", getResources().getDrawable(R.mipmap.ic_launcher)));
-        items.add(new NavigationItem("Contact Us", getResources().getDrawable(R.mipmap.ic_launcher)));
+        items.add(new NavigationItem("BCRFM Website", getResources().getDrawable(R.drawable.ic_web_black_48dp)));
+        items.add(new NavigationItem("About Us", getResources().getDrawable(R.drawable.ic_info_black_48dp)));
+        items.add(new NavigationItem("Contact Us", getResources().getDrawable(R.drawable.ic_account_circle_black_48dp)));
         return items;
     }
 
