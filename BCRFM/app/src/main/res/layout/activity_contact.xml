@@ -27,6 +27,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Call Us"
+            android:drawableLeft="@mipmap/ic_phone"
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
@@ -37,7 +38,7 @@
             android:layout_height="wrap_content"
             android:text="Email Us"
             android:layout_alignParentTop="true"
-            android:drawableLeft="@drawable/ic_email_black_24dp"
+            android:drawableLeft="@mipmap/ic_email"
             android:layout_centerHorizontal="true" />
 
         <Button
@@ -45,7 +46,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:drawableLeft="@drawable/ic_perm_phone_msg_black_24dp"
+            android:drawableLeft="@mipmap/ic_message"
             android:text="Text Us" />
 
 
