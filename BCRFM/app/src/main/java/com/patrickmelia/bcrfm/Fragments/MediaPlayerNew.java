@@ -1,8 +1,13 @@
 package com.patrickmelia.bcrfm.Fragments;
 
+import android.app.AlertDialog;
 import android.app.Fragment;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -29,17 +34,22 @@ public class MediaPlayerNew extends Fragment implements android.media.MediaPlaye
     private Button stop;
     private TextView txtVStatus;
 
+    private Context _context;
+
+    public MediaPlayerNew(Context context){
+        this._context = context;
+    }
+
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.activity_player, container, false);
 
         ((MainActivity)getActivity()).setTitle(R.string.home);
+        //isOnline();
 
         return view;
     }
 
-    /*public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);*/
 
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,9 +64,10 @@ public class MediaPlayerNew extends Fragment implements android.media.MediaPlaye
 
         play.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                play();
+                isOnline();
             }
         });
+
 
         pause.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
@@ -71,7 +82,28 @@ public class MediaPlayerNew extends Fragment implements android.media.MediaPlaye
         });
     }
 
+    private void isOnline() {
+        ConnectivityManager cm = (ConnectivityManager) _context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo ni = cm.getActiveNetworkInfo();
+        if (ni != null && ni.isConnected()){
+            play();
+        }
+        else{
+        new AlertDialog.Builder(_context)
+                .setTitle("Alert")
+                .setMessage("You must be connected to the internet to tune in!!")
+                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                    }
+                })
+
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .show();
+        }
+    }
+
     private void play() {
+
         //HTTP to BCRFM STREAM
         Uri myUri = Uri.parse("http://37.187.193.36:8002");
         try {

@@ -63,7 +63,7 @@ public class MainActivity extends ActionBarActivity
         FragmentManager fragmentManager = getFragmentManager();
         switch (position) {
             case 0:
-                newFragment = new MediaPlayerNew();
+                newFragment = new MediaPlayerNew(this);
                 break;
             case 1: //schedule
                 newFragment = new ScheduleFragment();
