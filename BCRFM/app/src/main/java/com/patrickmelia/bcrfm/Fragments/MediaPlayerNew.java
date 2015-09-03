@@ -63,12 +63,12 @@ public class MediaPlayerNew extends Fragment implements android.media.MediaPlaye
         pause.setEnabled(false);
         stop.setEnabled(false);
 
+        //Calls isOnline class to see if phone is connected to the internet..
         play.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 isOnline();
             }
         });
-
 
         pause.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
@@ -97,14 +97,12 @@ public class MediaPlayerNew extends Fragment implements android.media.MediaPlaye
                     public void onClick(DialogInterface dialog, int which) {
                     }
                 })
-
                 .setIcon(getResources().getDrawable(R.drawable.ic_warning_black_24dp))
                 .show();
         }
     }
 
     private void play() {
-
         //HTTP to BCRFM STREAM
         Uri myUri = Uri.parse("http://37.187.193.36:8002");
         try {

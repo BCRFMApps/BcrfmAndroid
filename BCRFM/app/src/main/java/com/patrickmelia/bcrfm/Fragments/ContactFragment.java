@@ -87,6 +87,22 @@ public class ContactFragment extends Fragment {
         }
     };
 
+    /*
+        //intent to open facebook page in fbook app
+        public static Intent getOpenFacebookIntent(Context context)
+        {
+            try
+            {
+                context.getPackageManager().getPackageInfo("com.facebook.katana", 0);
+                return new Intent(Intent.ACTION_VIEW, Uri.parse("fb://page/<id_here>"));
+            }
+            catch (Exception e) {
+                return new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/<user_name_here>"));
+            }
+        }
+
+     */
+
     View.OnClickListener emailhandler = new View.OnClickListener() {
         public void onClick(View v) {
             String email = "studio.brcfm@gmail.com";
