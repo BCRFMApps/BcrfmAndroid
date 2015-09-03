@@ -17,6 +17,7 @@ import android.widget.TextView;
 
 import com.patrickmelia.bcrfm.Fragments.AboutFragment;
 import com.patrickmelia.bcrfm.Fragments.ContactFragment;
+import com.patrickmelia.bcrfm.Fragments.DeveloperFragment;
 import com.patrickmelia.bcrfm.Fragments.FbookFragment;
 import com.patrickmelia.bcrfm.Fragments.MediaPlayerNew;
 import com.patrickmelia.bcrfm.Fragments.ScheduleFragment;
@@ -68,14 +69,17 @@ public class MainActivity extends ActionBarActivity
             case 1: //schedule
                 newFragment = new ScheduleFragment();
                 break;
-            case 2://Info
+            case 2://Website
                 newFragment = new WebSiteFragment();
                 break;
-            case 3://Contact
+            case 3://About
                 newFragment = new AboutFragment();
                 break;
             case 4://Contact
                 newFragment = new ContactFragment();
+                break;
+            case 5:
+                newFragment = new DeveloperFragment();
                 break;
         }
 

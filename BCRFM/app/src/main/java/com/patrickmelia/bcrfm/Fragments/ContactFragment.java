@@ -108,6 +108,7 @@ public class ContactFragment extends Fragment {
             String email = "studio.brcfm@gmail.com";
             Intent intent = new Intent(Intent.ACTION_SENDTO);
             intent.setData(Uri.parse("mailto:" + email));
+            intent.putExtra(Intent.EXTRA_TEXT, "\n\n\n\n\nSent via BCRFM App");
             startActivity(intent);
         }
     };
