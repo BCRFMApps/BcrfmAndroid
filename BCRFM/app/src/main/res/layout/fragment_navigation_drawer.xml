@@ -19,13 +19,56 @@
             android:src="@drawable/bcrfm101yellow" />
 
     </LinearLayout>
-    <android.support.v7.widget.RecyclerView android:id="@+id/drawerList"
-        xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout
+        android:id="@id/drawer"
         android:layout_width="match_parent"
-        android:clickable="true" android:scrollbars="vertical"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@id/containerDrawerImage">
+        <android.support.v7.widget.RecyclerView android:id="@+id/drawerList"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:clickable="true" android:scrollbars="vertical"
+            android:layout_height="wrap_content">
+        </android.support.v7.widget.RecyclerView>
 
-    </android.support.v7.widget.RecyclerView>
+        <!--<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="5"
+            android:rowCount="1"
+            android:id="@+id/socialmediaLinks">
+            <ImageButton
+                android:layout_marginLeft="@dimen/_50sdp"
+                android:layout_gravity="fill"
+                android:layout_columnSpan="2"
+                android:background="#6f69ff"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_width="@dimen/_50sdp"
+                android:src="@drawable/facebook"/>
+
+            <ImageButton
+                android:layout_marginLeft="@dimen/_50sdp"
+                android:layout_gravity="fill"
+                android:layout_columnSpan="2"
+                android:background="#00aced"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_width="@dimen/_50sdp"
+                android:src="@drawable/twitter"/>
+        </GridLayout>
+
+    <GridLayoutLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:horizontalSpacing="10dp"
+        android:verticalSpacing="10dp"
+        android:gravity="center"
+        android:layout_below="@id/drawer">
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/facebook"
+/>-->
+
+    </LinearLayout>
 
 </RelativeLayout>

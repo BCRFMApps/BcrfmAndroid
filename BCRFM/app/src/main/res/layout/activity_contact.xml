@@ -9,10 +9,12 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="260dp"
+        android:layout_height="200dp"
         android:layout_gravity="center_horizontal|top"
-        android:src="@drawable/bcrfm101yellow"
-        android:layout_marginTop="20dp" />
+        android:layout_marginTop="20dp"
+        android:src="@drawable/bcrfm101yellow" />
+
+
 
     <RelativeLayout
         android:layout_width="wrap_content"

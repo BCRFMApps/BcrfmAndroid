@@ -15,6 +15,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,7 +30,7 @@ public class MediaPlayerNew extends Fragment implements android.media.MediaPlaye
 
     private MediaPlayer mp = null;
     private String TAG = getClass().getSimpleName();
-    private Button play;
+    private ImageButton play;
     private Button pause;
     private Button stop;
     private TextView txtVStatus;
@@ -54,7 +55,7 @@ public class MediaPlayerNew extends Fragment implements android.media.MediaPlaye
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        play = (Button) getActivity().findViewById(R.id.btnPlay);
+        play = (ImageButton) getActivity().findViewById(R.id.btnPlay);
         pause = (Button) getActivity().findViewById(R.id.btnPause);
         stop = (Button) getActivity().findViewById(R.id.btnStop);
         //status = (TextView) findViewById(R.id.txtVStatus);
@@ -90,14 +91,14 @@ public class MediaPlayerNew extends Fragment implements android.media.MediaPlaye
         }
         else{
         new AlertDialog.Builder(_context)
-                .setTitle("Alert")
-                .setMessage("You must be connected to the internet to tune in!!")
+                .setTitle("Whoops!!")
+                .setMessage("You must be connected to the internet to tune in! Please activate mobile internet/wifi and try again.")
                 .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                     }
                 })
 
-                .setIcon(android.R.drawable.ic_dialog_alert)
+                .setIcon(getResources().getDrawable(R.drawable.ic_warning_black_24dp))
                 .show();
         }
     }
