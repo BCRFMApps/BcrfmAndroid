@@ -13,6 +13,8 @@
     <string name="tweet">BCR FM on Twitter</string>
     <string name="schedule">BCR FM Show Schedule</string>
 
+    <string name="search_title">Find Show by name eg <i>"The Double Espresso"</i></string>
+
     <string name="developer">About the Developer</string>
 
     <string name="developerinfo">This app was developed by Patrick Melia. Patrick has graduated with Bsc Hons Software Development degree from IT Sligo.

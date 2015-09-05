@@ -6,6 +6,8 @@ import android.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.SimpleAdapter;
@@ -29,7 +31,15 @@ public class ScheduleFragment extends Fragment {
 
         Toast.makeText(getActivity(), "Sorry we can't find any info at this time, please try again later.", Toast.LENGTH_LONG).show();
 
+        //setHasOptionsMenu(true);
+
         return view;
 
     }
+
+    /*@Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.options_menu, menu);
+        super.onCreateOptionsMenu(menu,inflater);
+    }*/
 }
