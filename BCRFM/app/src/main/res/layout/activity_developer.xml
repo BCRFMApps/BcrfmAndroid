@@ -2,8 +2,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-
     <ScrollView
         android:id="@+id/textAreaScroller"
         android:layout_width="fill_parent"
@@ -26,7 +24,7 @@
                 android:layout_height="150dp"
                 android:layout_gravity="center_horizontal|top"
                 android:layout_marginTop="@dimen/_20sdp"
-                android:src="@drawable/bcrfm101yellow" />
+                android:src="@drawable/developer" />
 
             <TextView
                 android:id="@+id/txtAbout"
@@ -34,13 +32,22 @@
                 android:layout_height="wrap_content"
                 android:fadeScrollbars="true"
                 android:fadingEdge="vertical"
-                android:lines="24"
+                android:lines="18"
                 android:scrollbarStyle="insideOverlay"
                 android:scrollbars="vertical"
                 android:text="@string/developerinfo"
                 android:layout_marginTop="@dimen/_20sdp" />
+
+                <Button
+                    android:id="@+id/btnEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Email Me"
+                    android:layout_alignParentTop="true"
+                    android:drawableLeft="@mipmap/ic_email"
+                    android:layout_centerHorizontal="true" />
+
         </LinearLayout>
     </ScrollView>
-
 
 </LinearLayout>
