@@ -21,7 +21,7 @@ import com.patrickmelia.bcrfm.R;
  */
 public class ScheduleFragment extends Fragment {
 
-    private RecyclerView mRecyclerView;
+    //private RecyclerView mRecyclerView;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

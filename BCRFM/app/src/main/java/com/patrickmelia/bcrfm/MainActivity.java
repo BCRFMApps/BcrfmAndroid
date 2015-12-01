@@ -88,21 +88,6 @@ public class MainActivity extends ActionBarActivity
                 .commit();
     }
 
-
-    public void displayBrowser(String url){
-        Uri uri = Uri.parse(url);
-        Intent browserIntent = new Intent(Intent.ACTION_VIEW);
-        browserIntent.setDataAndType(uri, "text/html");
-        browserIntent.addCategory(Intent.CATEGORY_BROWSABLE);
-        this.startActivity(browserIntent);
-    }
-
-    public enum cAct{
-        Splash, Main, Facebook, Twitter, Sch, About, Contact
-    }
-
-
-
     @Override
     public void onBackPressed() {
         if (mNavigationDrawerFragment.isDrawerOpen())
